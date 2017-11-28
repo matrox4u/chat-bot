@@ -1,0 +1,22 @@
+<form action="" class="chat-form">
+  <input [(ngModel)]="message" [ngModelOptions]="{standalone: true}"/>
+  <button (click)="sendMessage()">Send</button>
+</form>
+
+<div class="menu">
+  <div class="back"><i class="fa fa-chevron-left"></i> <img src="https://i.imgur.com/DY6gND0.png" draggable="false"/>
+  </div>
+  <div class="name">{{userName}}</div>
+  <div class="last">{{loggedInTime | date:'fullDate'}}</div>
+</div>
+
+<ol class="chat" style="height: 100%;min-height:500px;" #scrollMe [scrollTop]="scrollMe.scrollHeight">
+  <li [ngClass]="{'other': i%2 == 0 || message.side, 'self': i%2 != 0 && !message.side}" *ngFor="let message of messages;let i = index">
+    <div class="avatar" [attr.data-index]="i%2 == 0">
+      <img src="https://i.imgur.com/DY6gND0.png"/>
+    </div>
+    <div class="msg">
+      <p>{{message.text}}</p>
+    </div>
+  </li>
+</ol>

@@ -1,0 +1,36 @@
+{
+  "name": "node-skeleton",
+  "version": "1.0.0",
+  "license": "MIT",
+  "angular-cli": {},
+  "scripts": {
+    "serve": "ng serve --port=1010",
+    "start": "concurrently \"npm run devServ\" \"npm run serve\"",
+    "devServ": "node server/index.js"
+  },
+  "dependencies": {
+    "@angular/common": "~2.1.0",
+    "@angular/compiler": "~2.1.0",
+    "@angular/core": "~2.1.0",
+    "@angular/forms": "~2.1.0",
+    "@angular/http": "~2.1.0",
+    "@angular/platform-browser": "~2.1.0",
+    "@angular/platform-browser-dynamic": "~2.1.0",
+    "@angular/router": "~3.1.0",
+    "@types/socket.io-client": "^1.4.29",
+    "core-js": "^2.4.1",
+    "rxjs": "5.0.0-beta.12",
+    "socket.io-client": "^1.6.0",
+    "ts-helpers": "^1.1.1",
+    "zone.js": "^0.6.23"
+  },
+  "devDependencies": {
+    "concurrently": "^3.2.0",
+    "@types/node": "^6.0.42",
+    "angular-cli": "1.0.0-beta.18",
+    "codelyzer": "1.0.0-beta.1",
+    "ts-node": "1.2.1",
+    "tslint": "3.13.0",
+    "typescript": "~2.0.3"
+  }
+}
